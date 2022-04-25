@@ -92,14 +92,14 @@ check_system() {
         echo -e "${OK} ${GreenBG} El sistema actual es Ubuntu ${VERSION_ID} ${UBUNTU_CODENAME} ${Font}"
         INS="apt -y -qq"
     else
-        echo -e "${Error} ${RedBG} O sistema atual é ${ID} ${VERSION_ID} Não consta da lista de sistemas suportados, a instalação foi interrompida ${Font}"
+        echo -e "${Error} ${RedBG} El sistema actual es ${ID} ${VERSION_ID} Não consta da lista de sistemas suportados, a instalação foi interrompida ${Font}"
         exit 1
     fi
 }
 
 is_root() {
     if [ 0 == $UID ]; then
-        echo -e "${OK} ${GreenBG} O usuário atual é o usuário root, continue a executar ${Font}"
+        echo -e "${OK} ${GreenBG} El usuario actual es usuario root, continúe ejecutándose ${Font}"
         sleep 1
     else
         echo -e "${Error} ${RedBG} O usuário atual não é o usuário root, mude para o usuário root e execute novamente o script ${Font}"
