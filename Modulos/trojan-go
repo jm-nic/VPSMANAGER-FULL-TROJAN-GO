@@ -89,7 +89,7 @@ check_system() {
         echo -e "${OK} ${GreenBG} O sistema atual é Debian ${VERSION_ID} ${VERSION} ${Font}"
         INS="apt -y -qq"
     elif [[ "${ID}" == "ubuntu" && $(echo "${VERSION_ID}" | cut -d '.' -f1) -ge 16 ]]; then
-        echo -e "${OK} ${GreenBG} O sistema atual é Ubuntu ${VERSION_ID} ${UBUNTU_CODENAME} ${Font}"
+        echo -e "${OK} ${GreenBG} El sistema actual es Ubuntu ${VERSION_ID} ${UBUNTU_CODENAME} ${Font}"
         INS="apt -y -qq"
     else
         echo -e "${Error} ${RedBG} O sistema atual é ${ID} ${VERSION_ID} Não consta da lista de sistemas suportados, a instalação foi interrompida ${Font}"
