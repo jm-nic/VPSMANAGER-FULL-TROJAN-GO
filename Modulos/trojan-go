@@ -288,7 +288,7 @@ trojan_reset() {
         echo -e "${Error} ${RedBG} A configuração TLS-Shunt-Proxy está anormal e as informações do nome de domínio TLS não podem ser detectadas. Reinstale e tente novamente ${Font}"
         exit 4
     fi
-    read -rp "Por favor, digite a senha (Trojan-Go), ou padrão é aleatório :" tjpasswd
+    read -rp "Por favor, ingrese contraseña (Trojan-Go), o por defecto es:" tjpasswd
     [[ -z ${tjpasswd} ]] && tjpasswd=$(head -n 10 /dev/urandom | md5sum | head -c ${random_num})
     echo -e "${OK} ${GreenBG} Trojan-Go 密码: ${tjpasswd} ${Font}"
     read -rp "Deseja habilitar o suporte ao modo WebSocket (Y/N) [N]:" trojan_ws_mode
