@@ -203,7 +203,7 @@ config_exist_check() {
 domain_port_check() {
     read -rp "Insira a porta TLS (padrão 443):" tspport
     [[ -z ${tspport} ]] && tspport="443"
-    read -rp "Insira as informações do seu nome de domínio (por exemplo, fk.gfw.com):" domain
+    read -rp "Ingrese el dominio que apunta a tu vps (por ejemplo, jmnic.com):" domain
     domain=$(echo "${domain}" | tr '[:upper:]' '[:lower:]')
     domain_ip=$(ping -q -c 1 -t 1 "${domain}" | grep PING | sed -e "s/).*//" | sed -e "s/.*(//")
     echo -e "${OK} ${GreenBG} Obtendo informações de IP de rede pública, aguarde pacientemente ${Font}"
